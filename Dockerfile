@@ -35,6 +35,6 @@ RUN cd /usr/local; tar zxf ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz; rm ncb
 RUN cd /usr/local/bin; ln -s /usr/local/ncbi-blast-${BLAST_VERSION}+/bin/* .
 
 # Clean up
-RUN apt-get --purge autoremove -y software-properties-common curl \
+RUN apt-get --purge autoremove -y software-properties-common \
     && apt-get clean
 

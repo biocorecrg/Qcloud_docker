@@ -39,4 +39,5 @@ RUN apt-get --purge autoremove -y software-properties-common \
 
 COPY plugins/* $INSTALLATION_DIR/knime/plugins/
 
-RUN cd /usr/local/bin; ln -s $INSTALLATION_DIR/knime/knime .
+ENV PATH=${INSTALLATION_DIR}/knime/:${PATH}
+#RUN cd /usr/local/bin; ln -s $INSTALLATION_DIR/knime/knime .

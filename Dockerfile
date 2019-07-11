@@ -36,6 +36,10 @@ RUN cd /usr/local; curl --fail --silent --show-error --location --remote-name ft
 RUN cd /usr/local; tar zxf ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz; rm ncbi-blast-${BLAST_VERSION}+-x64-linux.tar.gz
 RUN cd /usr/local/bin; ln -s /usr/local/ncbi-blast-${BLAST_VERSION}+/bin/* .
 
+# installing 
+RUN apt-get install libxml2-utils
+
+
 ##RUN gcc --version
 
 # Install pandas and protobuf so KNIME can communicate with Python

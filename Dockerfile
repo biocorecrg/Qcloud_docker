@@ -27,7 +27,7 @@ RUN apt-get update \
  && apt-get --purge autoremove -y software-properties-common curl \
  && apt-get clean
 
-ENV PATH="/usr/local/knime_${KNIME_VERSION}/:${PATH}"
+ENV PATH="/usr/local/knime_${KNIME_VERSION}/:/usr/local/knime_${KNIME_VERSION}/plugins/org.knime.binary.jre.linux.x86_64_1.8.0.152-01/jre/bin/:${PATH}"
 COPY plugins/ /usr/local/knime_${KNIME_VERSION}/plugins/
 
 
